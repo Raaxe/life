@@ -10,7 +10,7 @@ client.on("ready", () => {
          name: 'Surprise Mother Fucker :) ',
          details: `I'm : KBOOSH - Developer and Programmer`,
          url: 'http://twitch.tv/Streammingg',
-         state: `Åäú áóãú ÊóÌöÏ áßú ÍÂÞÏú ÅÚáãú Ãäúß ÅäÓÂä ÝÂÔöáú`,
+         state: `Ã…Ã¤Ãº Ã¡Ã³Ã£Ãº ÃŠÃ³ÃŒÃ¶Ã Ã¡ÃŸÃº ÃÃ‚ÃžÃÃº Ã…ÃšÃ¡Ã£Ãº ÃƒÃ¤ÃºÃŸ Ã…Ã¤Ã“Ã‚Ã¤ ÃÃ‚Ã”Ã¶Ã¡Ãº`,
         application_id: '281376075802476544',
          assets: {
             small_image: `366835431037337600`,
@@ -23,4 +23,4 @@ client.on("ready", () => {
     });
     
 
-client.login("NDk4OTQ3NjQyMTEwNTA5MDY3.DrtiUw.NcuSV8TEL__q_nF-kHoHPWHMjNc");
+client.login("process.env.BOT_TOKEN");
