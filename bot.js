@@ -6,32 +6,31 @@ client.on('ready', () => {
 });
 
 
-const prefix = "!"
+ 
+const adminprefix = "$vip";
+const devs = ['498947642110509067'];
 client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id !== '509243410234867724') return;
-
-if (message.content.startsWith(prefix + 'g')) {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+   
+if (message.content.startsWith(adminprefix + 'setgdame')) {
   client.user.setGame(argresult);
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-} else 
-
-if (message.content.startsWith(prefix + 'w')) {
-client.user.setActivity(argresult, {type:'WATCHING'});
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-} else 
-if (message.content.startsWith(prefix + 'l')) {
-client.user.setActivity(argresult, {type:'LISTENING'});
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-} else 
-
-if (message.content.startsWith(prefix + 's')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/Justin-Ly0001");
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
+    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+} else
+  if (message.content.startsWith(adminprefix + 'setname')) {
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+} else
+  if (message.content.startsWith(adminprefix + 'setavatar')) {
+client.user.setAvatar(argresult);
+  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+      } else    
+if (message.content.startsWith(adminprefix + 'setT')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk");
+    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
-
+ 
 });
 
 client.login(process.env.BOT_TOKEN);
